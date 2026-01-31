@@ -131,10 +131,50 @@
             font-size: 12px;
             margin-left: 10px;
         }
+        .requisites {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #9b59b6;
+        }
+        .requisites table {
+            background: transparent;
+            margin: 15px 0 0 0;
+        }
+        .requisites td {
+            border-bottom: 1px solid #dee2e6;
+            padding: 10px 15px;
+        }
+        .requisites td:first-child {
+            font-weight: 600;
+            color: #495057;
+            width: 40%;
+        }
+        .centered-list {
+            text-align: center;
+            margin: 0 auto;
+            display: inline-block;
+            width: 100%;
+        }
+        .centered-list ol {
+            text-align: left;
+            display: inline-block;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .centered-list li {
+            text-align: left;
+            margin-left: 0;
+        }
         @media (max-width: 768px) {
             body { padding: 10px; }
             .container { padding: 20px; }
             .feature-list { grid-template-columns: 1fr; }
+            .requisites table { display: block; }
+            .requisites tr { display: block; margin-bottom: 10px; }
+            .requisites td { display: block; width: 100%; }
+            .requisites td:first-child { width: 100%; }
         }
     </style>
 </head>
@@ -315,7 +355,7 @@
             <li>Возвращаетесь в бот — подписка уже активна</li>
         </ol>
         
-        <h3>4.3. Подтверждение оплаты:</h3>
+        <h3>4.3. Подтверждение оплата:</h3>
         <ul>
             <li>Чек приходит на email, указанный при оплате</li>
             <li>В боте появляется подтверждение активации подписки</li>
@@ -384,7 +424,27 @@
         <p>9.2. Мы не имеем доступа и не храним данные ваших банковских карт.</p>
         <p>9.3. Robokassa соответствует стандарту безопасности PCI DSS.</p>
         
-        <h2>10. Контакты по платежам</h2>
+        <h2>10. Реквизиты Исполнителя</h2>
+        
+        <div class="requisites">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>ИНН:</td>
+                        <td>772472770272</td>
+                    </tr>
+                    <tr>
+                        <td>Контактный e-mail:</td>
+                        <td>aishopperbot@mail.ru</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px; font-size: 15px; color: #666;">
+                <em>Примечание: Для запроса официальных документов используйте указанные реквизиты.</em>
+            </p>
+        </div>
+        
+        <h2>11. Контакты по платежам</h2>
         
         <div class="contact-box">
             <h3 style="color: white; margin-top: 0;">По вопросам оплаты и подписок:</h3>
@@ -401,20 +461,23 @@
             </div>
         </div>
         
-        <h2>11. Заключительные положения</h2>
-        <p>11.1. Настоящая Оферта вступает в силу с момента публикации и действует до отзыва Исполнителем.</p>
-        <p>11.2. Исполнитель оставляет за собой право изменять условия Оферты. Актуальная версия всегда доступна по этой ссылке.</p>
-        <p>11.3. Все споры решаются в соответствии с законодательством РФ.</p>
+        <h2>12. Заключительные положения</h2>
+        <p>12.1. Настоящая Оферта вступает в силу с момента публикации и действует до отзыва Исполнителем.</p>
+        <p>12.2. Исполнитель оставляет за собой право изменять условия Оферты. Актуальная версия всегда доступна по этой ссылке.</p>
+        <p>12.3. Все споры решаются в соответствии с законодательством РФ.</p>
         
         <div class="highlight" style="text-align: center;">
             <p><strong>Оплачивая подписку, вы подтверждаете, что:</strong></p>
-            <ol>
-                <li>Ознакомились с условиями этой Оферты</li>
-                <li>Согласны с ценами и тарифами</li>
-                <li>Принимаете условия оплаты через Robokassa</li>
-                <li>Понимаете, что возврат за цифровые услуги не предусмотрен</li>
-                <li>Даете согласие на обработку платежных данных</li>
-            </ol>
+            <div class="centered-list">
+                <ol>
+                    <li>Ознакомились с условиями этой Оферты</li>
+                    <li>Согласны с ценами и тарифами</li>
+                    <li>Принимаете условия оплаты через Robokassa</li>
+                    <li>Понимаете, что возврат за цифровые услуги не предусмотрен</li>
+                    <li>Даете согласие на обработку платежных данных</li>
+                    <li>Принимаете условия, указанные в реквизитах Исполнителя</li>
+                </ol>
+            </div>
         </div>
         
         <div style="text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 15px;">
@@ -428,6 +491,4 @@
         </div>
     </div>
 </body>
-
 </html>
-
